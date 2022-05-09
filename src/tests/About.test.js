@@ -35,6 +35,8 @@ test('Teste se a página contém dois parágrafos com texto sobre a Pokédex', (
 test('Teste se a página contém a imagem de uma Pokédex', () => {
   renderWithRouter(<About />);
 
+  // Consultei o seguinte link para o teste abaixo:
+  // https://stackoverflow.com/questions/60509527/jestreact-native-testing-library-how-to-test-an-image-src
   const image = screen.getByRole('img', { name: /pokédex/i });
   expect(image.src).toContain('https://cdn2.bulbagarden.net/upload/thumb/8/86/Gen_I_Pok%C3%A9dex.png/800px-Gen_I_Pok%C3%A9dex.png');
 });
